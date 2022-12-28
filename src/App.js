@@ -1,8 +1,10 @@
 // import logo from './logo.svg';
 import axios from "axios";
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from "react-redux";
 import './App.css';
 import PageNation from "./components/PageNation";
+
 
 function App() {
   const [userArray,setuserArray]=useState([]);
@@ -15,6 +17,7 @@ function App() {
       });
       setuserArray(response.data);
       setuserDate(response.data.slice(0,10));
+      // dispatch(fetchArray(response.data));
       // console.log(response.data[0]);
   };
   useEffect(()=>{fetchUsers()},[]);

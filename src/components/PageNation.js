@@ -11,7 +11,7 @@ export default function PageNation({data,pageHandler}) {
       <center>
       <div className="pagebutton">&#60;</div>
         {
-            pageNumbers.map(page=><div className='pagebutton' onClick={()=>pageHandler(page)}>{page}</div>)
+            pageNumbers.map(page=><div className='pagebutton' onClick={()=>pageHandler(page)} key={page}>{page}</div>)
         }
         <div className="pagebutton">&#62;</div>
       </center>
