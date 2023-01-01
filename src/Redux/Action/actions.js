@@ -20,3 +20,26 @@ export const updatePage=(page)=>
         payload:page,
     }
 }
+
+export const updatesearch=(str)=>
+{
+    return {
+        type:ActionConstants.UPDATE_SEARCH,
+        payload:str,
+    }
+}
+
+export const updateResult=(arr)=>
+{
+    return{
+        type:ActionConstants.UPDATE_RESULT,
+        payload:arr,
+    }
+}
+
+export const pageshows=(arr)=>{
+    return {
+        type:ActionConstants.PAGE_SHOWS,
+        payload:arr,
+    }
+}

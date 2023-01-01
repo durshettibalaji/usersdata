@@ -3,6 +3,9 @@ const initialState={
     arr:[],
     pages:[],
     pageNumber:0,
+    search:"",
+    sreachArr:[],
+    pageshows:[],
 }
 export const userArray=(state=initialState,{type,payload})=>
 {
@@ -12,7 +15,13 @@ export const userArray=(state=initialState,{type,payload})=>
         case ActionConstants.PAGES_ARRAY:
             return{...state,pages:payload}
         case ActionConstants.Update_pagenumber:
-            return{...state,pageNumber:payload}
+            return{...state,pageNumber:payload,search:""}
+        case ActionConstants.UPDATE_SEARCH:
+            return{...state,search:payload}
+        case ActionConstants.UPDATE_RESULT:
+            return{...state,sreachArr:payload}
+        case ActionConstants.PAGE_SHOWS:
+            return{...state,pageshows:payload}
         default:
             return state;
     }
